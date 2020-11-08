@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body { margin: 0; font-family: Helvetica, sans-serif; background-color: #ffffff; } a { color: #000; } /* mobile-nav */ .mobile-nav { background-color: #fff; box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); } .mobile-nav ul { margin: 0; padding: 0; list-style: none; overflow: hidden; background-color: #fff; } .mobile-nav li a { display: block; padding: 20px 20px; border-right: 1px solid #f4f4f4; text-decoration: none; } .mobile-nav li a:hover, .mobile-nav .menu-btn:hover { background-color: #f4f4f4; } /* menu */ .mobile-nav .menu { clear: both; max-height: 0; transition: max-height .2s ease-out; } /* menu icon */ .mobile-nav .menu-icon { cursor: pointer; display: inline-block; padding: 28px 20px; user-select: none; } .mobile-nav .menu-icon .navicon { background: #333; display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 18px; } .mobile-nav .menu-icon .navicon:before, .mobile-nav .menu-icon .navicon:after { background: #333; content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%; } .mobile-nav .menu-icon .navicon:before { top: 5px; } .mobile-nav .menu-icon .navicon:after { top: -5px; } /* menu btn */ .mobile-nav .menu-btn { display: none; } .mobile-nav .menu-btn:checked ~ .menu { max-height: 300px; } .mobile-nav .menu-btn:checked ~ .menu-icon .navicon { background: transparent; } .mobile-nav .menu-btn:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); } .mobile-nav .menu-btn:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); } .mobile-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .mobile-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after { top: 0; } /* 48em = 768px */ @media (min-width: 30rem) { .mobile-nav li { float: left; } .mobile-nav li a { padding: 20px 30px; } .mobile-nav .menu { clear: none; max-height: none; } .mobile-nav .menu-icon { display: none; } }
+body{
+
+    width: 100% ;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 8px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}p{
+    text-indent: 7px;
+}
+.h1{
+    padding: 20px;
+    background-color: rgb(255, 108, 108);
+    color: white;
+}
+.h2{
+    padding: 15px;
+    background-color: rgb(252, 252, 252);
+    color: rgb(66, 66, 66);
+}
+legend{
+    line-height:36px;
+}
+header img{
+    height: 80px;
+}
+.index-class{
+    width: 30% ;
+    float: right;
+}
+main{
+    display: flex;
+    width: 69%;
+    float: left;
+    flex-flow: wrap;
+} 
+article{
+    margin: 20px 0px;
+}
+article img{
+    float: right;
+    width: 30%;
+}
+article section{
+    float: left;
+    width: 69%;
+    margin: 20px 0px;
+}
+
+article small{
+    padding: 20px 2px;
+    float: left;
+    background: #ffffff;
+    width: 100%;
+    margin-top: 19px;
+}
+
+.main-footer{
+    clear: both;
+    font-size: 20px;
+    background: #fbfbfb;
+    height: 56px;
+    font-weight: bold;
+    position: relative;
+} .main-footer small{
+    padding: 20px;
+    float: left;
+}.main-footer section{
+    float: right;
+    padding: 20px;
+  
+}
+.cookies{
+    color:#fff;
+    background-color: #FA0;
+    opacity: 50%;
+    right: 15%;
+    bottom: 0%;
+    text-transform: uppercase;
+    position: fixed;
+    z-index: 9999;
+} 
+
+/* Here are the codes for table */
+.GEO,#form-contact{
+    width: 68%;
+    float: left;
+   max-width: 100%;
+}
+#form-contact input ,#form-contact textarea , #form-contact button{
+    width: 100%;
+    padding: 14px 0px;
+    border-radius: 15px;
+    margin: 10px 0px;
+    text-align: center;
+    border-width: 1px ;
+    border-color: black;
+    border-style: double;
+}   
+#form-contact button{
+    background-color: rgb(255, 105, 105);
+    color: white;
+    
+}
+.GEO thead {
+    background-color: black;
+    color: white;
+} .GEO td,.GEO th{
+
+    padding: 10px;
+} .country{
+    background: yellow;
+}
+.product-img{
+    height: 122px;
+    display: block;
+}
+/* Here are the codes for tablet design*/
+@media only screen and (min-width:481px) and (max-width:1179px) {
+body{
+    display: flex;
+    flex-flow: column;
+}
+    article img{
+        float: left;
+        width: 30%;
+    }
+    article section{
+        float: right;
+        width: 69%;
+        margin: 20px 0px;
+    }
+
+    .index-class{
+        width: 100% ;
+        order: 1;
+    } 
+
+    main{
+        width: 100% ;
+        order: 2;
+    } 
+    .contact-section{
+        width: 100% ;
+    }
+    footer{
+        order: 3;
+    }
+    video{
+       width: 100%;
+    }
+
+  }
+/* Here are the codes for mobile design*/
+@media only screen and (max-width: 480px) {
+    .GEO, #form-contact {
+        width: 100%;
+      
+        max-width: 100%;
+    }
+
+    header section{
+        width: 69%;
+        float: left;
+    }
+    header nav{
+        width: 30%;
+        float: right;
+    }
+    header img{
+        display: none;
+    }
+
+    body{
+        display: flex;
+        flex-flow: column;
+    }
+    video{
+        display: none;
+    }
+        article img{
+            float: left;
+            width: 30%;
+        }
+        article section{
+            float: right;
+            width: 69%;
+            margin: 20px 0px;
+        }
+    
+        .index-class{
+            width: 100% ;
+            order: 1;
+        }
+        main{
+            width: 100% ;
+            order: 2;
+        } 
+        footer{
+            order: 3;
+        }
+
+}
